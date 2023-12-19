@@ -2,7 +2,7 @@
 
 body {
     font-family: 'Cabin';
-    background-color: #758190;
+    background-color: white;
 }
 
 #tentacles {
@@ -11,16 +11,40 @@ body {
 
 .header {
     display: flex;
-    background-color: lightblue;
+    background-color: white;
     padding: 1%;
     align-items: center;
     margin-left: -10px;
     margin-right: -10px;
     margin-top: -10px;
+    justify-content: center;
+    border-bottom: 2.5px solid #a8b0bc;
+}
+
+.header-text {
+    color: rgb(63, 164, 197);
+}
+
+.container {
+    margin-left: 15vw;
+    margin-right: 15vw;
+
+    @media screen and (max-width:620px) {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
+.total-stats-container {
+    padding: 2%;
+    border-bottom: 2.5px solid #a8b0bc;
+    text-align: center;
 }
 
 .stats-container {
     display: flex;
+    padding: 2%;
+    /*border-bottom: 2.5px solid #a8b0bc;*/
 }
 
 .stats-container:hover {
@@ -34,12 +58,14 @@ body {
 }
 
 .stats-card {
-    background-color: #a8b0bc;
+    background-color: aliceblue;
+    border: 2.5px solid #a8b0bc;
     border-radius: 7px;
     padding: 1%;
     margin: 1%;
     width: 100%;
     text-align: center;
+    color: rgb(63, 164, 197);
 }
 
 #num-contributions, #total-raised, #num-games {
@@ -54,17 +80,18 @@ body {
 
 .game-img {
     width: 100%;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     box-shadow: 0 0 10px #FFFFFF;
 }
 
 .game-card {
-    background-color: #FFFFFF;
+    background-color: white;
     padding: 1%;
     margin: 1%;
     width: 300px;
     text-align: center;
     border-radius: 7px;
+    border: 2.5px solid #a8b0bc;
 }
 
 .game-card:hover {
@@ -74,11 +101,13 @@ body {
 
 #button-container {
     text-align: center;
+    padding-bottom: 4%;
 }
 
 button {
     font-family: 'Cabin';
-    border: none;
+    border: 1.5px solid #a8b0bc;
+    background-color: white;
     padding: 1%;
     margin: 1%;
     border-radius: 7px;
@@ -95,6 +124,12 @@ input {
     width: 25%;
     margin: 1%;
     padding: 1%;
-    border: none;
+    border: 1.5px solid #a8b0bc;
     border-radius: 7px;
+}
+
+#description-container {
+    text-align: center;
+    padding: 2%;
+    border-bottom: 2.5px solid #a8b0bc;
 }
