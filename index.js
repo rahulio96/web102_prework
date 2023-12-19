@@ -36,14 +36,24 @@ function addGamesToPage(games) {
         // add the class game-card to the list
         div.classList.add('game-card');
 
+        /* New feature not related to challenge */
+        const diff =  games[i].goal - games[i].pledged;
+        let funded = `<p style = "color:green">$${diff} from reaching goal!</p>`;
+        let style = 'border-bottom: 10px dashed rgb(63, 164, 197)';
+        if (diff < 0) {
+            funded = '<p style = "color:rgb(63, 164, 197)">Goal reached</p>';
+            style = 'border-bottom: 10px solid rgb(63, 164, 197)'
+        }
+
         // set the inner HTML using a template literal to display some info 
         // about each game
         // TIP: if your images are not displaying, make sure there is space
         // between the end of the src attribute and the end of the tag ("/>")
-        div.innerHTML = `<img class="game-img" src="${games[i].img}"/>
+        div.innerHTML = `<img class="game-img" style="${style}" src="${games[i].img}"/>
                         <h3>${games[i].name}</h3> 
                         <p>${games[i].description}</p>
                         <p>Backers: ${games[i].backers}</p>`
+                        + funded
 
         // append the game to the games-container
         gamesContainer.appendChild(div);     
