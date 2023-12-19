@@ -38,7 +38,7 @@ GIF created with ...
 
 ## Notes
 
-* First time working with innerHTML which confused me at first, but soon got the hang of it.
+* Working with innerHTML confused me at first, but I soon got the hang of it and realized just how useful it is.
 
 ## License
 
